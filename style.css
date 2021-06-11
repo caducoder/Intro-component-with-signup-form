@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -11,8 +13,8 @@ body
 {
    text-align: center;
    color: #fff;
-   font-family: sans-serif;
-   background: rgba(223, 20, 20, 0.493);
+   font-family: 'Poppins', sans-serif;
+   background: #ff7a7a;
    background-image: url(/images/bg-intro-mobile.png);
 }
 
@@ -32,8 +34,6 @@ body
    justify-content: space-between;
 }
 
-
-
 .text p{
    margin-top: 20px;
    line-height: 25px;
@@ -47,12 +47,12 @@ body
 }
 
 .try-it{
-   background-color: blueviolet;
-   padding: 15px 60px;
+   background-color: hsl(248, 32%, 49%);
+   padding: 15px 65px;
    border-radius: 7px;
    line-height: 25px;
    margin: 20px 0;
-   
+   box-shadow: 0 6px 1px rgba(0,0,0,0.17);
 }
 .try-it p span{
    font-weight: bold;
@@ -71,8 +71,9 @@ input{
    border-radius: 5px;
    border: 1px solid rgba(0,0,0,0.2);
 }
+
 input[type='submit']{
-   background-color: rgb(27, 199, 27);
+   background-color: hsl(154, 59%, 51%);
    font-size: 1.1em;
    font-weight: normal;
    letter-spacing: 1px;
@@ -81,7 +82,18 @@ input[type='submit']{
    color: white;
    border: none;
    cursor: pointer;
+   box-shadow: 0 4px 0 hsla(154, 50%, 37%, 0.8);
 }
+
+input[type='submit']:hover{
+   background-color: hsl(154, 59%, 65%);
+}
+
+input[type='submit']:active{
+   transform: translateY(4px);
+   box-shadow:none;
+}
+
 #terms{
    color: gray;
    font-size: 0.8em;
