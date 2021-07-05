@@ -52,15 +52,20 @@ body{
    margin-bottom: 20px;
    box-shadow: 0 6px 1px rgba(0,0,0,0.17);
 }
+
 .try-it p span{
    font-weight: bold;
 }
+
 .form{
    background-color: #fff;
    border-radius: 7px;
    padding: 20px;
+   color: black;
 }
-input{
+
+.inpt{
+   position: relative;
    display: block;
    padding: 15px;
    width: 100%;
@@ -70,11 +75,44 @@ input{
    border: 1px solid rgba(0,0,0,0.2);
 }
 
+.inv{
+   position: relative;
+}
+
+.icon::after{
+   content: url(/images/icon-error.svg);
+   position: absolute;
+   top: 30px;
+   left: 120px;
+}
+
+.invalid-msg{
+   display: none;
+   font-size: 0.75em;
+   font-weight: 500;
+   text-align: right;
+   transform: translateY(-20px);
+   font-style: italic;
+   color: rgba(202, 17, 17, 0.637);
+}
+
+.invalid{
+   border: 2px solid rgba(223, 20, 20, 0.6);
+   color: rgba(202, 17, 17, 0.637);
+}
+
+.invalid:placeholder-shown{
+   color: red;
+}
+
 input[type='submit']{
    background-color: hsl(154, 59%, 51%);
    font-size: 1.1em;
    font-weight: normal;
    letter-spacing: 1px;
+   width: 100%;
+   margin-bottom: 20px;
+   border-radius: 5px;
    padding: 15px;
    text-transform: uppercase;
    color: white;
@@ -126,7 +164,7 @@ input[type='submit']:active{
       align-items: center;
    }
    .text{
-      padding: 0 0px 0 0;
+      padding: 0;
       justify-content: center;
       align-items: center;
       text-align: left;
@@ -141,6 +179,9 @@ input[type='submit']:active{
    }
    .form{
       padding: 30px;
+   }
+   .icon::after{
+      left: 200px;
    }
    footer{
       position: absolute;
